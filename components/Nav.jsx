@@ -18,7 +18,7 @@ function Nav() {
 
     }, [])
   return (
-    <nav className={`fixed top-0 transition-all duration-700 w-full ${scrolled ? 'bg-gradient-to-bl from-blue-600/50 to-black/50' : 'bg-transparent'} h-12 px-8 py-8 font-extrabold`}>
+    <nav className={`fixed top-0 w-full transition-all duration-1000 ${scrolled && 'bg-black/70'} h-8 px-8 py-8 font-bold`}>
       <div className="w-full h-full flex items-center justify-around text-white text-xl">
         <figure>ShopLand</figure>
         <ul className="flex space-x-3">
