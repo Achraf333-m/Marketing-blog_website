@@ -7,6 +7,7 @@ function index() {
       article
     )
   );
+  
   return (
     <div className="text-white text-2xl">
       ARTICLES PAGE {articles.map((article) => <Link href="articles/[articleName]" as={`articles/${article}`}>{article}</Link> )}
