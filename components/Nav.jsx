@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 function Nav() {
@@ -20,7 +21,10 @@ function Nav() {
   return (
     <nav className={`fixed top-0 w-full transition-all duration-1000 ${scrolled && 'bg-black/90'} h-8 px-8 py-8 font-bold`}>
       <div className="w-full h-full flex items-center justify-around text-white text-xl">
+        <Link href="/">
+        
         <figure>ShopLand</figure>
+        </Link>
         <ul className="flex space-x-3">
           <li>Item 1</li>
           <li>Item 2</li>

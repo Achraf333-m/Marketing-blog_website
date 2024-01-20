@@ -1,13 +1,15 @@
-function ArticleStyle() {
+import Link from "next/link";
+
+function ArticleStyle({ article }) {
   return (
-    <li className="flex flex-col justify-center items-center w-[calc(100%/3)] p-4">
+    <Link href="articles/[articleName]" as={`articles/${article}`} className="flex flex-col justify-center items-center rounded-lg hover:bg-blue-500/30 w-[calc(100%/3)] p-4 mb-12">
       {/* insert imag here */}
       <div className="bg-blue-300 w-64 h-64 rounded-md "></div>
-      <h3 className="text-xl font-semibold">Title</h3>
+      <h3 className="text-xl font-semibold">{article}</h3>
       <p className="max-w-60 font-medium text-center">
-        Lorem ipsum dolor sit amet consectetur.
+        Lorem ipsum dolor sit amet consectetur. = {article}
       </p>
-    </li>
+    </Link>
   );
 }
 

@@ -1,33 +1,49 @@
+import ArticleLanding from "@/components/ArticleLanding";
+import ArticleStyle from "@/components/ArticleStyle";
+import Footer from "@/components/Footer";
+import Landing from "@/components/Landing";
+import Nav from "@/components/Nav";
 import Link from "next/link";
 
 function index() {
-  const articles = ["article1", "article2", "article3"];
-  articles.map((article) =>
-    console.log(
-      article
-    )
-  );
-  
+  const articles = ["article1", "article2", "article3", "article4", "article5", "article6", "article7", "article8", "article9"];
+
+
   return (
-    <div className="text-white text-2xl">
-      ARTICLES PAGE {articles.map((article) => <Link href="articles/[articleName]" as={`articles/${article}`}>{article}</Link> )}
-      <div>
-        {articles.map((article) => {
-            <>
-            <p>{article}</p>
-            <Link href="articles/[articleName]" as={`articles/${article}`}>
-              <p>{article}</p>
-            </Link>
-            </>
-          
-        })}
-      </div>
-      {/* <Link href="/articles/1">
-                FIRST ARTICLE
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vel fuga assumenda deserunt voluptas! Officiis perspiciatis reprehenderit at temporibus repudiandae fuga libero sed aliquam facere, explicabo accusamus ratione ut labore.</p>
-            </Link> */}
-    </div>
+    <>
+      <Nav />
+
+      <main className="w-full">
+        <ArticleLanding />
+        <section className=" text-white px-10 mb-96">
+          <div className="flex justify-center items-center flex-wrap bg-black/50 shadow-2xl shadow-cyan-500 rounded-lg px-6 py-10 w-full">
+           {articles.map((article) => <ArticleStyle article={article} />)}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
 
 export default index;
+
+{
+  /* <div>
+  {articles.map((article) => {
+      <>
+      <p>{article}</p>
+      <Link href="articles/[articleName]" as={`articles/${article}`}>
+        <p>{article}</p>
+      </Link>
+      </>
+    
+  })}
+</div> */
+}
+{
+  /* <Link href="/articles/1">
+          FIRST ARTICLE
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex vel fuga assumenda deserunt voluptas! Officiis perspiciatis reprehenderit at temporibus repudiandae fuga libero sed aliquam facere, explicabo accusamus ratione ut labore.</p>
+      </Link> */
+}
