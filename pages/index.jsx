@@ -22,14 +22,14 @@ export default function Home() {
         <Landing scroll={scroll} />
 
         <section id="shop" className="w-full space-y-40 py-10">
-          <section className="h-[80vh] w-full py-8 px-10">
-            <div className="w-full h-full bg-blue-50/90 flex flex-col justify-evenly items-center shadow-2xl shadow-blue-500 rounded-lg px-10 text-black">
+          <section className="h-[80vh] w-full">
+            <div className="w-full h-full bg-blue-50 flex flex-col justify-evenly items-center px-10 text-black">
               <Featured />
             </div>
           </section>
 
-          <section className="h-[80vh] w-full py-8 px-10">
-            <div className="w-full h-full bg-pink-50/90 flex flex-col justify-evenly items-center shadow-2xl shadow-pink-500 rounded-lg px-10 text-black">
+          <section className="h-[80vh] w-full py-8">
+            <div className="w-full h-full bg-blue-50 flex flex-col justify-evenly items-center px-10 text-black">
               <FavProducts />
             </div>
           </section>

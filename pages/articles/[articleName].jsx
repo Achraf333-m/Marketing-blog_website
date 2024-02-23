@@ -9,18 +9,18 @@ export default function Article({ articleName }) {
       <BsArrowLeftCircleFill className="cursor-pointer text-white text-3xl border-2 hover:border-black rounded-full active:invert transition-all duration-500" />
       </Link>
       <main className="w-full mb-96">
-        <div className="flex items-center justify-around px-4 py-32 w-full">
+        <div className="flex flex-col items-center space-y-20 px-4 py-32 w-full">
+          <figure className="w-full">
+            <div className="bg-blue-200 w-full h-96"></div>
+          </figure>
           <div className="flex flex-col space-y-4">
             <h1 className="text-5xl text-white font-bold">{articleName}</h1>
             <h1 className="font-semibold text-xl text-white">By author name</h1>
           </div>
-          <figure>
-            <div className="bg-blue-500 w-80 h-80"></div>
-          </figure>
         </div>
 
-        <section className="p-10 w-full">
-          <div className="bg-black/70 text-white w-full p-10 rounded-lg">
+        <section className="bg-white p-10 w-full">
+          <div className=" text-black w-full p-10 rounded-lg">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
               fugit vitae sapiente adipisci sit qui, illo fuga hic aliquam

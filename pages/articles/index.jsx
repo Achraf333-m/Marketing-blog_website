@@ -15,8 +15,8 @@ function index() {
 
       <main className="w-full">
         <ArticleLanding />
-        <section className=" text-white px-10 mb-96">
-          <div className="flex justify-center items-center flex-wrap bg-black/50 shadow-2xl shadow-cyan-500 rounded-lg px-6 py-10 w-full">
+        <section className=" text-black">
+          <div className="flex justify-center items-center flex-wrap bg-blue-50 pb-36 shadow-2xl shadow-cyan-500 px-6 py-10 w-full">
            {articles.map((article) => <ArticleStyle article={article} />)}
           </div>
         </section>
